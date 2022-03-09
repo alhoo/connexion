@@ -6,9 +6,9 @@ import logging
 from typing import Optional  # NOQA
 
 try:
-    from swagger_ui_bundle import swagger_ui_2_path, swagger_ui_3_path
+    from swagger_ui_bundle import swagger_ui_2_path, swagger_ui_4_path
 except ImportError:
-    swagger_ui_2_path = swagger_ui_3_path = None
+    swagger_ui_2_path = swagger_ui_4_path = None
 
 from connexion.decorators.uri_parsing import AbstractURIParser
 
@@ -28,7 +28,7 @@ class ConnexionOptions:
         self.oas_version = oas_version
         if self.oas_version >= (3, 0, 0):
             self.openapi_spec_name = '/openapi.json'
-            self.swagger_ui_local_path = swagger_ui_3_path
+            self.swagger_ui_local_path = swagger_ui_4_path
         else:
             self.openapi_spec_name = '/swagger.json'
             self.swagger_ui_local_path = swagger_ui_2_path
