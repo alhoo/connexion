@@ -28,7 +28,9 @@ install_requires = [
     'werkzeug>=1.0,<3',
 ]
 
-swagger_ui_require = 'swagger-ui-bundle>=0.0.2,<0.1'
+swagger_ui_require = [
+    'swagger_ui_bundle @ git+https://github.com/alhoo/swagger_ui_bundle.git@feature/4.6.1'
+]
 
 flask_require = [
     'flask>=1.0.4,<3',
